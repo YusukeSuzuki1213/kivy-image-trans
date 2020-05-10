@@ -13,19 +13,16 @@ from kivy.graphics import Rectangle
 
 # 読み込むファイルのリスト
 FILES = [
-    'result.csv',
-    'result.csv',
-    'result.csv',
-    'result.csv',
-    'result.csv',
-    'result.csv',
-    'result.csv',
-    'result.csv',
-    'result.csv',
-    'result.csv',
-    
-    
-    #'10-20kV.csv'    
+    '10-20kV.csv',
+    '10-20kV.csv',
+    '10-20kV.csv',
+    '10-20kV.csv',
+    '10-20kV.csv',
+    '10-20kV.csv',
+    '10-20kV.csv',
+    '10-20kV.csv',
+    '10-20kV.csv',
+    '10-20kV.csv',
 ]
 
 # csvファイルをndarrayに変換しリスト化したもの
