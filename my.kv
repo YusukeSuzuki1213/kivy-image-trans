@@ -22,10 +22,11 @@
       Label:
         size_hint_y: 0.2
         text: '10kv'
+
     BoxLayout:
       orientation: 'vertical'
       Slider:
-        id: testSlider2
+        id: slider_2
         name: 'slider_2'
         orientation: "vertical"
         min: 0.0
@@ -46,67 +47,172 @@
     BoxLayout:
       orientation: 'vertical'
       Slider:
+        id: slider_3
+        name: 'slider_3'
         orientation: "vertical"
-        size_hint_y: 0.7        
+        min: 0
+        max: 100
+        value: 0
+        value_track: True
+        value_track_color: 1,0,0,1
+        on_value: root.on_value(str(self.name), int(self.value))
+        size_hint_y: 0.6
       Label:
-        size_hint_y: 0.3
-        text: 'Left'
+        id: label_3
+        name: 'label_3'
+        size_hint_y: 0.2
+        text: '0%'
+      Label:
+        size_hint_y: 0.2
+        text: '30kv'
+    BoxLayout:
+      orientation: 'vertical'      
+      Slider:
+        id: slider_4
+        name: 'slider_4'
+        orientation: "vertical"
+        min: 0
+        max: 100
+        value: 0
+        value_track: True
+        value_track_color: 1,0,0,1
+        on_value: root.on_value(str(self.name), int(self.value))
+        size_hint_y: 0.6
+      Label:
+        id: label_4
+        name: 'label_4'
+        size_hint_y: 0.2
+        text: '0%'
+      Label:
+        size_hint_y: 0.2
+        text: '40kv'
+    BoxLayout:
+      orientation: 'vertical'      
+      Slider:
+        id: slider_5
+        name: 'slider_5'
+        orientation: "vertical"
+        min: 0
+        max: 100
+        value: 0
+        value_track: True
+        value_track_color: 1,0,0,1
+        on_value: root.on_value(str(self.name), int(self.value))
+        size_hint_y: 0.6
+      Label:
+        id: label_5
+        name: 'label_5'
+        size_hint_y: 0.2
+        text: '0%'
+      Label:
+        size_hint_y: 0.2
+        text: '50kv'      
+    BoxLayout:
+      orientation: 'vertical'      
+      Slider:
+        id: slider_6
+        name: 'slider_6'
+        orientation: "vertical"
+        min: 0
+        max: 100
+        value: 0
+        value_track: True
+        value_track_color: 1,0,0,1
+        on_value: root.on_value(str(self.name), int(self.value))
+        size_hint_y: 0.6
+      Label:
+        id: label_6
+        name: 'label_6'
+        size_hint_y: 0.2
+        text: '0%'
+      Label:
+        size_hint_y: 0.2
+        text: '60kv'
+
     BoxLayout:
       orientation: 'vertical'
       Slider:
+        id: label_7
+        name: 'slider_7'
         orientation: "vertical"
-        size_hint_y: 0.7        
+        min: 0.0
+        max: 100.0
+        value: 0
+        value_track: True
+        value_track_color: 1,0,0,1
+        on_value: root.on_value(str(self.name), int(self.value))        
+        size_hint_y: 0.6
       Label:
-        size_hint_y: 0.3
-        text: 'Left'
+        id: label_7
+        name: 'label_7'
+        size_hint_y: 0.2
+        text: '0%'
+      Label:
+        size_hint_y: 0.2
+        text: '70kv'
     BoxLayout:
-      orientation: 'vertical'
+      orientation: 'vertical'      
       Slider:
+        id: slider_8
+        name: 'slider_8'
         orientation: "vertical"
-        size_hint_y: 0.7        
+        min: 0
+        max: 100
+        value: 0
+        value_track: True
+        value_track_color: 1,0,0,1
+        on_value: root.on_value(str(self.name), int(self.value))
+        size_hint_y: 0.6
       Label:
-        size_hint_y: 0.3
-        text: 'Left'
+        id: label_8
+        name: 'label_8'
+        size_hint_y: 0.2
+        text: '0%'
+      Label:
+        size_hint_y: 0.2
+        text: '80kv'
     BoxLayout:
-      orientation: 'vertical'
+      orientation: 'vertical'      
       Slider:
+        id: slider_9
+        name: 'slider_9'
         orientation: "vertical"
-        size_hint_y: 0.7        
+        min: 0
+        max: 100
+        value: 0
+        value_track: True
+        value_track_color: 1,0,0,1
+        on_value: root.on_value(str(self.name), int(self.value))
+        size_hint_y: 0.6
       Label:
-        size_hint_y: 0.3
-        text: 'Left'
+        id: label_9
+        name: 'label_9'
+        size_hint_y: 0.2
+        text: '0%'
+      Label:
+        size_hint_y: 0.2
+        text: '90kv'
     BoxLayout:
-      orientation: 'vertical'
+      orientation: 'vertical'      
       Slider:
+        id: slider_10
+        name: 'slider_10'
         orientation: "vertical"
-        size_hint_y: 0.7        
+        min: 0
+        max: 100
+        value: 0
+        value_track: True
+        value_track_color: 1,0,0,1
+        on_value: root.on_value(str(self.name), int(self.value))
+        size_hint_y: 0.6
       Label:
-        size_hint_y: 0.3
-        text: 'Left'
-    BoxLayout:
-      orientation: 'vertical'
-      Slider:
-        orientation: "vertical"
-        size_hint_y: 0.7        
+        id: label_10
+        name: 'label_10'
+        size_hint_y: 0.2
+        text: '0%'
       Label:
-        size_hint_y: 0.3
-        text: 'Left'
-    BoxLayout:
-      orientation: 'vertical'
-      Slider:
-        orientation: "vertical"
-        size_hint_y: 0.7        
-      Label:
-        size_hint_y: 0.3
-        text: 'Left'
-    BoxLayout:
-      orientation: 'vertical'
-      Slider:
-        orientation: "vertical"
-        size_hint_y: 0.7        
-      Label:
-        size_hint_y: 0.3
-        text: 'Left'          
+        size_hint_y: 0.2
+        text: '100kv'      
   BoxLayout:
     orientation: 'vertical'
     RelativeLayout:      

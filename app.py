@@ -7,6 +7,14 @@ from kivy.graphics import Rectangle
 
 FILES = [
     'sinogram3.csv',
+    'sinogram3.csv',
+    'sinogram3.csv',
+    'sinogram3.csv',
+    'sinogram3.csv',
+    'sinogram3.csv',
+    'sinogram3.csv',
+    'sinogram3.csv',
+    'sinogram3.csv',
     'sinogram3.csv'
     #'10-30kV.csv',
 ]
@@ -18,12 +26,9 @@ class AppBox(BoxLayout):
     def __init__(self, **kwargs):
         super(AppBox, self).__init__(**kwargs)
         
-    def save_image(self):
-        
+    def save_image(self):        
         sum_image = Image.fromarray(sum(array_list)).convert('RGB')
         sum_image.save('result.jpg')
-
-        pass
                        
     def save_array(self):
         print("====")
@@ -31,9 +36,8 @@ class AppBox(BoxLayout):
         print("====")
         print(array_list[1])
         print("要素の足し算結果↓")
-        print(sum(array_list))                        
-
-    
+        print(sum(array_list))
+        np.savetxt('result.csv', sum(array_list), delimiter=',')
 
     def on_value(self, id, prop):
         if(id == "slider_1"):
@@ -43,8 +47,39 @@ class AppBox(BoxLayout):
         elif (id == "slider_2"):
             self.ids.label_2.text = self.prop_text(prop)
             self.change_image(1, prop)
-    
+        
+        elif (id == "slider_3"):
+            self.ids.label_3.text = self.prop_text(prop)
+            self.change_image(2, prop)
 
+        elif (id == "slider_4"):
+            self.ids.label_4.text = self.prop_text(prop)
+            self.change_image(3, prop)
+
+        elif (id == "slider_5"):
+            self.ids.label_5.text = self.prop_text(prop)
+            self.change_image(4, prop)
+
+        elif (id == "slider_6"):
+            self.ids.label_6.text = self.prop_text(prop)
+            self.change_image(5, prop)
+
+        elif (id == "slider_7"):
+            self.ids.label_7.text = self.prop_text(prop)
+            self.change_image(6, prop)
+
+        elif (id == "slider_8"):
+            self.ids.label_8.text = self.prop_text(prop)
+            self.change_image(7, prop)
+
+        elif (id == "slider_9"):
+            self.ids.label_9.text = self.prop_text(prop)
+            self.change_image(8, prop)
+
+        elif (id == "slider_10"):
+            self.ids.label_10.text = self.prop_text(prop)
+            self.change_image(9, prop)
+    
     def change_image(self, index, prop):
         array_list[index] = calc_csv(array_list[index], prop)            
         pillow_list[index] = Image.fromarray(array_list[index]).convert('RGB')
