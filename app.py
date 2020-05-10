@@ -1,13 +1,13 @@
-import kivy
-
 from kivy.app import App
-from kivy.uix.label import Label
+from kivy.uix.boxlayout import BoxLayout
 
+class AppBox(BoxLayout):
+    pass
 
 class MyApp(App):
-
     def build(self):
-        return Label(text='Hello world')
+        layout = AppBox()
+        return layout
 
 
 if __name__ == '__main__':
