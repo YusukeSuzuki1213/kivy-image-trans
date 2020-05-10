@@ -110,16 +110,17 @@
   BoxLayout:
     orientation: 'vertical'
     RelativeLayout:      
-      canvas:
-        Rectangle:
-          source: "test.jpg"
-          size: 400, 400
-          
+      id: right_widget
+      
     Button:
+      id: saveImage
       size: 50, 50
       pos: 200, 200
       text: "Save as Image"
+      on_press: root.save_image()
     Button:
+      id: saveArray
       size: 50, 50
       pos: 200, 600
       text: "Save as Array"
+      on_press: root.save_array()
