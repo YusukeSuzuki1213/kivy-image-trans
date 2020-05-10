@@ -38,11 +38,7 @@ class AppBox(BoxLayout):
         super(AppBox, self).__init__(**kwargs)
 
     # 10個のファイルの画素値を合計して画像にして保存        
-<<<<<<< HEAD
     def save_image(self):
-=======
-    def save_image(self):        
->>>>>>> 58008a311b9a1537c8b0235a5b63eca23a634d52
         sum_image = Image.fromarray(sum(array_list)).convert('RGB')
         sum_image.save('result.jpg')
     
@@ -55,11 +51,7 @@ class AppBox(BoxLayout):
         print("要素の足し算結果↓")
         print(sum(array_list))
         np.savetxt('result.csv', sum(array_list), delimiter=',')
-<<<<<<< HEAD
         print("要素の終了")
-=======
-
->>>>>>> 58008a311b9a1537c8b0235a5b63eca23a634d52
     # スライドバーが更新されたら
     def on_value(self, id, prop):
         # .kvファイル上のidが'slider_1'だったら
