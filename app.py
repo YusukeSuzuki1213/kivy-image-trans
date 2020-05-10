@@ -145,15 +145,9 @@ def calc_csv(input_data, prop=0.0001):
 class MyApp(App):
     def build(self):
         layout = AppBox()
-<<<<<<< HEAD
 
         return layout
 
-=======
-
-        return layout
-
->>>>>>> 58008a311b9a1537c8b0235a5b63eca23a634d52
 if __name__ == '__main__':
     # FILESのcsvを全て開いてndarrayに変換
     array_list = list(map(calc_csv, list(map(open_csv, FILES))))
